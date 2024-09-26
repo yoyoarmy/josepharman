@@ -1,0 +1,2 @@
+About
+I’m Joseph Arman, a senior at Bentley University majoring in Computer Information Systems. I have experience in AI development, data analysis, and eCommerce optimization. My portfolio showcases projects that combine technical skills with business insights to solve real-world challenges.
