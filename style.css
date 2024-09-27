@@ -222,12 +222,12 @@ footer {
     color: white;
     margin: 0 1rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 5rem;
     display: inline-block;
     background-color: #555;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
