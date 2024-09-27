@@ -206,6 +206,7 @@ nav a {
 }
 
 /* Footer Styling */
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -215,19 +216,20 @@ footer {
 }
 
 .footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Adds space between icons */
     margin-bottom: 1rem;
 }
 
 .footer-icons a {
     color: white;
-    margin: 0 1rem;
     text-decoration: none;
-    font-size: 2rem;
-    display: inline-block;
+    font-size: 1.5rem;
     background-color: #555;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,7 +242,6 @@ footer {
 .footer-icons i {
     font-size: 1.5rem;
 }
-
 
 
 /* Fade-in Animation for elements */
