@@ -31,6 +31,45 @@ body {
     background: transparent; /* Transparent background, no full background */
 }
 
+/* Add initial state for shrinking header */
+.sticky-header.shrink {
+    max-width: 60px; /* Shrink the header bubble */
+    padding: 5px 10px;
+    border-radius: 50%; /* Make it circular when shrunk */
+    justify-content: center; /* Keep the content centered */
+    align-items: center; /* Ensure the content stays vertically centered */
+    margin: 0 auto; /* Ensure it's centered horizontally within the page */
+}
+
+/* Hide navigation links when header is shrunk */
+.sticky-header.shrink .navigation {
+    display: none;
+}
+
+/* When not shrunk, ensure the full header looks as it does now */
+.sticky-header:not(.shrink) .navigation {
+    display: flex;
+}
+
+/* Smooth transitions for shrinking/expanding */
+.sticky-header {
+    transition: max-width 0.3s, padding 0.3s, border-radius 0.3s;
+}
+
+/* Expand header on hover */
+.sticky-header.shrink:hover {
+    max-width: 700px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    justify-content: space-between; /* Return content alignment */
+}
+
+/* Show navigation links when hovering */
+.sticky-header.shrink:hover .navigation {
+    display: flex;
+}
+
+
 .header-content {
     display: flex;
     justify-content: space-between;
