@@ -71,20 +71,30 @@
 
     <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form action="https://api.web3forms.com/submit" method="POST">
-
-            <input type="hidden" name="access_key" value="<form action="https://api.web3forms.com/submit" method="POST">
-
-            <input type="hidden" name="access_key" value="197fbeef-76f0-41b3-b0ad-a77646d9e7ad            ">
-
-            <input type="text" name="name" required>
-            <input type="email" name="email" required>
-            <textarea name="message" required></textarea>
-            <button type="submit">Submit Form</button>
-
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+            <!-- Hidden API Access Key -->
+            <input type="hidden" name="access_key" value="197fbeef-76f0-41b3-b0ad-a77646d9e7ad">
+    
+            <!-- Input fields -->
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="Your Name">
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Your Email">
+    
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required placeholder="Your Message"></textarea>
+    
+            <!-- Submit Button -->
+            <div class="button-wrapper">
+                <button type="submit" class="btn">Submit Form</button>
+            </div>
         </form>
+        
+        <!-- Success Message -->
         <div id="success-message" class="hidden">Thank you for reaching out!</div>
     </section>
+    
     
 
     <!-- Footer Section with LinkedIn and Email Icons -->
