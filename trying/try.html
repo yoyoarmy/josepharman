@@ -71,24 +71,30 @@
 
     <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
-            <!-- Hidden API Access Key -->
+        <form action="https://api.web3forms.com/submit" method="POST">
+
             <input type="hidden" name="access_key" value="197fbeef-76f0-41b3-b0ad-a77646d9e7ad">
-    
-            <!-- Input fields -->
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required placeholder="Your Name">
+        
+            <input type="text" name="subject" value="New Submission from Web3Forms">
+          
+            <input type="hidden" name="from_name" value="Your Website Name">
+          
             
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required placeholder="Your Email">
+            <input type="hidden" name="ccemail" value="partner@example.com">
+        
+            <input type="hidden" name="replyto" value="customer@example.com">
+        
+            <!-- If javascript, use "window.location.hash" for redirects -->
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
     
-            <label for="message">Message</label>
-            <textarea name="message" id="message" required placeholder="Your Message"></textarea>
-    
-            <!-- Submit Button -->
-            <div class="button-wrapper">
-                <button type="submit" class="btn">Submit</button>
-            </div>
+            <input type="file" name="attachment" />
+            <input type="email" name="email" required>
+            <input type="text" name="First Name" required>
+            <input type="text" name="Phone Number" required>
+            <textarea name="message" cols="30" rows="10" required></textarea>
+        
+            <button type="submit">Submit</button>
+        
         </form>
         
         <!-- Success Message -->
