@@ -2,6 +2,8 @@ html {
     scroll-behavior: smooth;
 }
 
+
+
 /* General Body Styling */
 body {
     margin: 0;
@@ -18,18 +20,61 @@ body {
     padding: 2rem 0;
 }
 
-/* Header Styling */
-header {
-    background: #161b22;
-    color: #58a6ff; /* Bright blue for coder feel */
-    padding: 1rem 0;
-    text-align: center;
-    border-bottom: 1px solid #30363d; /* Adds a terminal-like border */
+/* Sticky Header Styling */
+.sticky-header {
+    position: sticky;
+    top: 10px; /* A bit of space from the top */
+    width: 100%; /* Full width but we will control the bubble size */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex;
+    justify-content: center; /* Center the header content */
+    background: transparent; /* Transparent background, no full background */
 }
 
-header h1 {
-    font-size: 2rem;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px; /* Less wide */
+    width: 80%; /* A bit narrower than the full width */
+    background-color: #111; /* Darker background for content */
+    padding: 10px 20px;
+    border-radius: 50px; /* Creates the rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
 }
+
+.navigation a {
+    margin-right: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.05em;
+}
+
+.navigation a:hover {
+    color: #58a6ff; /* Hover color for links */
+}
+
+.theme-toggle {
+    background-color: #111;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.theme-toggle i {
+    font-size: 18px;
+}
+
+.theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+}
+
 
 nav ul {
     list-style: none;

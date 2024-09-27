@@ -13,16 +13,17 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <header class="sticky-header">
+        <div class="header-content">
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
@@ -138,6 +139,21 @@
             });
         });
         </script>
+
+<script>
+    const themeToggleButton = document.querySelector('.theme-toggle');
+    themeToggleButton.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+    });
+</script>
+
+<style>
+    /* Add dark-mode styling */
+    .dark-mode {
+        background-color: #000;
+        color: #fff;
+    }
+</style>
         
 
     <!-- AOS JavaScript -->
