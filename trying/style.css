@@ -4,14 +4,59 @@ html {
 
 
 
+/* Font Face Definitions */
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(/_next/static/media/62328fecf9e80426-s.woff2) format("woff2");
+    unicode-range: u+0102-0103,u+0110-0111,u+0128-0129,u+0168-0169,u+01a0-01a1,u+01af-01b0,u+0300-0301,u+0303-0304,u+0308-0309,u+0323,u+0329,u+1ea0-1ef9,u+20ab;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(/_next/static/media/c7eb187887c48af6-s.woff2) format("woff2");
+    unicode-range: u+0100-02af,u+0304,u+0308,u+0329,u+1e00-1e9f,u+1ef2-1eff,u+2020,u+20a0-20ab,u+20ad-20c0,u+2113,u+2c60-2c7f,u+a720-a7ff;
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url(/_next/static/media/2d141e1a38819612-s.p.woff2) format("woff2");
+    unicode-range: u+00??,u+0131,u+0152-0153,u+02bb-02bc,u+02c6,u+02da,u+02dc,u+0304,u+0308,u+0329,u+2000-206f,u+2074,u+20ac,u+2122,u+2191,u+2193,u+2212,u+2215,u+feff,u+fffd;
+}
+
+@font-face {
+    font-family: 'Space Grotesk Fallback';
+    src: local("Arial");
+    ascent-override:88.82%;descent-override:26.36%;line-gap-override:0.00%;size-adjust:110.78%;
+}
+
+/* Applying Space Grotesk font to all elements except headers */
+body, p, a, span, li, input, textarea, button {
+    font-family: 'Space Grotesk', 'Space Grotesk Fallback', sans-serif; /* Use Space Grotesk for everything except headers */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Mono', monospace;/* Keep headers with inherited font or set to another font if desired */
+}
+
+/* Continue with your existing CSS */
+
 /* General Body Styling */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto Mono', monospace; /* Monospace font for a coder feel */
     background-color: #0d1117; /* Dark background */
     color: #c9d1d9; /* Soft white text */
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
 .container {
@@ -147,7 +192,6 @@ nav a:hover {
 
 /* Hero Section */
 #hero {
-    background: #161b22; /* Darker hero section */
     color: #c9d1d9;
     padding: 5rem 0;
     text-align: center;
@@ -161,21 +205,6 @@ nav a:hover {
 #hero p {
     font-size: 1.25rem;
     margin: 1rem 0;
-}
-
-#hero .btn {
-    background-color: #238636; /* Green for buttons */
-    color: white;
-    padding: 0.75rem 2rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-#hero .btn:hover {
-    background-color: #2ea043;
 }
 
 /* Code Editor Style for About Section */
@@ -210,9 +239,9 @@ nav a:hover {
 }
 
 #experience h2 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #58a6ff;
 }
 
@@ -228,14 +257,16 @@ nav a:hover {
 
 /* Skills Section */
 #skills {
-    padding: 3rem 0;
+    padding: 1rem 0;
     background-color: #161b22;
 }
 
 #skills h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
     color: #58a6ff;
 }
 
@@ -353,27 +384,8 @@ form input[type="text"], form input[type="email"], form textarea {
     border: 1px solid #30363d;
 }
 
-/* Style for the submit button */
-.button-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
 
-button.btn {
-    background-color: #238636;
-    color: white;
-    padding: 0.75rem 2rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
 
-button.btn:hover {
-    background-color: #2ea043;
-}
 
 /* Style for the success message */
 #success-message {
@@ -392,8 +404,8 @@ button.btn:hover {
 #contact {
     background-color: #161b22; /* Dark background to contrast the form */
     color: #58a6ff;
-    padding: 3rem;
-    border-radius: 15px; /* Rounded corners */
+    padding: 2rem;
+    border-radius: 20px; /* Rounded corners */
     max-width: 700px; /* Limit the width of the form bubble */
     margin: 3rem auto; /* Center the form on the page */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow for elevation */
@@ -401,9 +413,15 @@ button.btn:hover {
 }
 
 #contact h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
     color: #58a6ff;
+    font-weight: 700;
+    font-size: 3rem; 
+    line-height: 2rem;
+    text-align: left;
+    
 }
 
 #contact form {
@@ -430,21 +448,6 @@ button.btn:hover {
     border: 1px solid #30363d;
 }
 
-#contact button {
-    background-color: #238636;
-    color: white;
-    padding: 1rem 2rem;
-    border: none;
-    cursor: pointer;
-    font-size: 1.25rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    width: 100%; /* Make the button full-width */
-}
-
-#contact button:hover {
-    background-color: #2ea043;
-}
 
 /* Styling the success message */
 #success-message {
@@ -469,4 +472,138 @@ button.btn:hover {
 .light-mode {
     background-color: #fff;
     color: #000;
+}
+
+/* Styling for the time display */
+.time-display {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Hide the time display when the header is expanded or hovered */
+.sticky-header:not(.shrink) .time-display,
+.sticky-header.shrink:hover .time-display {
+    display: none;
+}
+
+/* Ensure the time display is visible only when the header is shrunken and not hovered */
+.sticky-header.shrink .time-display {
+    display: flex;
+}
+
+
+/* Transition for smooth appearance */
+.time-display {
+    transition: opacity 0.5s ease;
+}
+
+/* Styling for the "Download CV" and "Submit" buttons */
+.download-btn {
+    display: inline-block; /* Ensure the button takes only the space of the text */
+    width: auto; /* Prevent the button from taking full width */
+    padding: 12px 24px;
+    font-family: 'Space Grotesk', 'Space Grotesk Fallback', sans-serif;
+    font-size: 1.1rem;
+    color: #111; /* Dark text color */
+    background-color: #f5f7fa; /* Light background color */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Light border */
+    border-radius: 12px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    margin: 0 auto; /* Center the button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.download-btn:hover {
+    background-color: #ffffff; /* Slightly lighter on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Technologies section */
+#technologies {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.technologies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Styling for each technology item */
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: #111; /* Dark background matching your site */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: #c9d1d9; /* Text color consistent with your site */
+}
+
+.tech-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.tech-item p {
+    margin: 0;
+    font-family: 'Space Grotesk', 'Space Grotesk Fallback', sans-serif; /* Consistent with your site */
+    font-size: 1rem;
+}
+
+.tech-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tech-item:hover p {
+    color: #58a6ff; /* Change text color on hover */
+}
+
+/* Hero Section Typing Effect */
+.typed-text {
+    border-right: 2px solid #58a6ff; /* Cursor effect */
+    white-space: nowrap;
+    overflow: hidden; /* Ensure text stays in line */
+    display: inline-block;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #58a6ff; /* Cursor blink color */
+    }
+}
+
+/* Container for the scroll line */
+.scroll-line-container {
+    position: fixed;
+    top: 0;
+    left: 0px; /* Left-justify the line */
+    width: 2px; /* Line thickness */
+    height: 100%;
+    background-color: transparent; /* Background remains transparent */
+    z-index: 9999; /* Ensure it is visible on top of the page content */
+}
+
+/* The scroll line that fills up */
+.scroll-line {
+    width: 100%;
+    height: 0; /* Initially zero, will be filled as you scroll */
+    background: linear-gradient(to bottom, #00f, #0ff); /* Gradient effect */
+    transition: height 0.1s ease-out;
 }

@@ -15,10 +15,14 @@
 <body>
     <header class="sticky-header">
         <div class="header-content">
+            <div class="time-display">
+                
+                <span id="current-time"></span>
+            </div>
             <nav class="navigation">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
+                <a href="#technologies">Skills</a>
                 <a href="#contact">Contact</a>
             </nav>
             <button class="theme-toggle">
@@ -26,13 +30,18 @@
             </button>
         </div>
     </header>
-    
+
+    <div class="scroll-line-container">
+        <div class="scroll-line"></div>
+    </div>    
 
     <section id="hero">
         <div class="hero-content">
-            <h2>Hello I am Joseph Arman.</h2>
+            <h2 class="hero-text">
+            <span class="typed-text"></span>
+            </h2>
             <p>A passionate software engineer striving for efficiency by implementing AI to automate processes. </p> <br>
-            <a href="https://docs.google.com/document/d/1jFRpaFwu73s3tJ6OnKbB0YGa8pDYRDem/edit?usp=sharing&ouid=113124627461045429007&rtpof=true&sd=true" class="btn">Download My CV</a>
+            <a href="https://docs.google.com/document/d/1jFRpaFwu73s3tJ6OnKbB0YGa8pDYRDem/edit?usp=sharing&ouid=113124627461045429007&rtpof=true&sd=true" class="download-btn">Download CV</a>
         </div>
         </div>
     </section>
@@ -62,11 +71,41 @@
         </div>
     </section>
 
+    <section id="technologies" class="container" data-aos="fade-up">
+        <h2>Technologies</h2>
+        <div class="technologies-grid">
+            <a href="https://docs.python.org/3/" target="_blank" class="tech-item">
+                <img src="images/python.png" alt="Python">
+                <p>PYTHON</p>
+            </a>
+            <a href="https://docs.oracle.com/javase/8/docs/" target="_blank" class="tech-item">
+                <img src="images/java.png" alt="Java">
+                <p>JAVA</p>
+            </a>
+            <a href="https://www.mysql.com/" target="_blank" class="tech-item">
+                <img src="images/sql.png" alt="SQL">
+                <p>SQL</p>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="tech-item">
+                <img src="images/css.svg" alt="CSS">
+                <p>CSS</p>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="tech-item">
+                <img src="images/html.png" alt="HTML">
+                <p>HTML</p>
+            </a>
+            <a href="https://react.dev/" target="_blank" class="tech-item">
+                <img src="images/React.png" alt="React">
+                <p>REACT</p>
+            </a>
+        </div>
+    </section>
+    
+
     <!-- Skills Section -->
     <section id="skills" class="container" data-aos="fade-up">
-        <h2>Technology Skills & Certifications</h2>
+        <h2>Certifications</h2>
         <ul>
-            <li><strong>Technology:</strong> C, Python, Java, SQL, CSS, HTML, Next.JS, Microsoft Office</li>
             <li><strong>Certifications:</strong> AWS, Google Analytics, Adobe EP, Marketo, HubSpot Marketing</li>
         </ul>
     </section>
@@ -88,9 +127,9 @@
             <textarea name="message" id="message" required placeholder="Your Message"></textarea>
     
             <!-- Submit Button -->
-            <div class="button-wrapper">
-                <button type="submit" class="btn">Submit</button>
-            </div>
+           
+                <button type="submit" class="download-btn">Submit</button>
+            
         </form>
         <!-- Success Message -->
         <div id="success-message" style="display: none;">Thank you for reaching out!</div>
@@ -197,6 +236,8 @@ themeToggleButton.addEventListener('click', () => {
             duration: 1000
         });
     </script>
+
+    
     
     <script src="script.js"></script>
 </body>
