@@ -13,25 +13,36 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Joseph Arman</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+    <header class="sticky-header">
+        <div class="header-content">
+            <div class="time-display">
+                
+                <span id="current-time"></span>
+            </div>
+            <nav class="navigation">
+                <a href="#about">About</a>
+                <a href="#experience">Experience</a>
+                <a href="#technologies">Skills</a>
+                <a href="#contact">Contact</a>
             </nav>
+            <button class="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
         </div>
     </header>
 
+    <div class="scroll-line-container">
+        <div class="scroll-line"></div>
+    </div>    
+
     <section id="hero">
         <div class="hero-content">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Hello im Joseph. A passionate software engineer striving for efficiency by implementing AI to automate processes.</p>
-            <a href="#experience" class="btn">Java and Python Developer</a>
+            <h2 class="hero-text">
+            <span class="typed-text"></span>
+            </h2>
+            <p>A passionate software engineer striving for efficiency by implementing AI to automate processes. </p> <br>
+            <a href="https://docs.google.com/document/d/1jFRpaFwu73s3tJ6OnKbB0YGa8pDYRDem/edit?usp=sharing&ouid=113124627461045429007&rtpof=true&sd=true" class="download-btn">Download CV</a>
+        </div>
         </div>
     </section>
 
@@ -60,31 +71,71 @@
         </div>
     </section>
 
+    <section id="technologies" class="container" data-aos="fade-up">
+        <h2>Technologies</h2>
+        <div class="technologies-grid">
+            <a href="https://docs.python.org/3/" target="_blank" class="tech-item">
+                <img src="images/python.png" alt="Python">
+                <p>PYTHON</p>
+            </a>
+            <a href="https://docs.oracle.com/javase/8/docs/" target="_blank" class="tech-item">
+                <img src="images/java.png" alt="Java">
+                <p>JAVA</p>
+            </a>
+            <a href="https://www.mysql.com/" target="_blank" class="tech-item">
+                <img src="images/sql.png" alt="SQL">
+                <p>SQL</p>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" class="tech-item">
+                <img src="images/css.svg" alt="CSS">
+                <p>CSS</p>
+            </a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" class="tech-item">
+                <img src="images/html.png" alt="HTML">
+                <p>HTML</p>
+            </a>
+            <a href="https://react.dev/" target="_blank" class="tech-item">
+                <img src="images/React.png" alt="React">
+                <p>REACT</p>
+            </a>
+        </div>
+    </section>
+    
+
     <!-- Skills Section -->
     <section id="skills" class="container" data-aos="fade-up">
-        <h2>Technology Skills & Certifications</h2>
+        <h2>Certifications</h2>
         <ul>
-            <li><strong>Technology:</strong> C, Python, Java, SQL, CSS, HTML, Next.JS, Microsoft Office</li>
             <li><strong>Certifications:</strong> AWS, Google Analytics, Adobe EP, Marketo, HubSpot Marketing</li>
         </ul>
     </section>
 
     <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+        <form action="https://api.web3forms.com/submit" method="POST" id="contact-form">
+            <!-- Hidden API Access Key -->
+            <input type="hidden" name="access_key" value="197fbeef-76f0-41b3-b0ad-a77646d9e7ad">
+    
+            <!-- Input fields -->
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required placeholder="Your Name">
             
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="Your Email">
+    
+            <label for="message">Message</label>
+            <textarea name="message" id="message" required placeholder="Your Message"></textarea>
+    
+            <!-- Submit Button -->
+           
+                <button type="submit" class="download-btn">Submit</button>
             
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <button type="submit" class="btn">Send Message</button>
         </form>
-        <div id="success-message" class="hidden">Thank you for reaching out!</div>
+        <!-- Success Message -->
+        <div id="success-message" style="display: none;">Thank you for reaching out!</div>
     </section>
+    
+    
 
     <!-- Footer Section with LinkedIn and Email Icons -->
     <footer>
@@ -99,6 +150,82 @@
         <p>&copy; 2024 Joseph Arman. All rights reserved.</p>
     </footer>
 
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+        
+            const form = this;
+            const formData = new FormData(form);
+        
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Show the success message
+                    document.getElementById('success-message').style.display = 'block';
+        
+                    // Reset the form
+                    form.reset();
+                } else {
+                    alert('There was an error submitting the form. Please try again.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting the form. Please try again.');
+            });
+        });
+        </script>
+
+<script>
+   const themeToggleButton = document.querySelector('.theme-toggle');
+const bodyElement = document.body;
+
+// Store the current (original) background color in a variable
+const originalBackgroundColor = getComputedStyle(bodyElement).backgroundColor;
+
+// Add event listener for toggle button
+themeToggleButton.addEventListener('click', () => {
+    // Toggle between dark mode and light mode
+    bodyElement.classList.toggle('light-mode');
+
+    // Check if light mode is active
+    if (bodyElement.classList.contains('light-mode')) {
+        // Change the icon to sun and set the background to white
+        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        bodyElement.style.backgroundColor = '#fff'; // Light mode (white background)
+    } else {
+        // Change the icon back to moon and set the background to the original color
+        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        bodyElement.style.backgroundColor = originalBackgroundColor; // Revert to original dark mode color
+    }
+});
+
+
+    window.addEventListener('scroll', () => {
+    const header = document.querySelector('.sticky-header');
+    if (window.scrollY > 100) {
+        header.classList.add('shrink'); // Shrink header after scrolling down 100px
+    } else {
+        header.classList.remove('shrink'); // Restore the original header when back at the top
+    }
+});
+
+
+</script>
+
+<style>
+    /* Add dark-mode styling */
+    .dark-mode {
+        background-color: #000;
+        color: #fff;
+    }
+</style>
+        
+
     <!-- AOS JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
@@ -109,6 +236,8 @@
             duration: 1000
         });
     </script>
+
+    
     
     <script src="script.js"></script>
 </body>

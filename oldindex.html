@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joseph Arman's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Joseph Arman</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello im Joseph. A passionate software engineer striving for efficiency by implementing AI to automate processes.</p>
+            <a href="#experience" class="btn">Java and Python Developer</a>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>As a fourth-year Computer Information Systems student at Bentley University, I have a passion for technology, exploring the possibilities of AI, and analyzing business opportunities. My interest in innovation led me to pursue a major in Computer Information Systems. During the summer of 2019, I launched an entrepreneurial venture, acquiring valuable experience in marketing, sales, inventory control, and brand administration. These hands-on experiences have shaped my leadership, organizational, and interpersonal skills while fostering my creative growth.</p>
+    </section>
+
+    <section id="experience" class="container">
+        <h2>My Experience</h2>
+        <div class="project" data-aos="fade-right">
+            <h3>Customer Experience Intern - Omni Pro (June 2024 - August 2024)</h3>
+            <p>Coordinated improvements in customer journey building, automating interactions for over 1 million monthly visitors, and analyzing trends to identify growth areas.</p>
+        </div>
+        <div class="project" data-aos="fade-left">
+            <h3>Founder - Hypeup507 (August 2019 - August 2024)</h3>
+            <p>Founded a sneaker resale business with over 1,500 recurring clients, growing the business by 300% through international expansion and strategic partnerships.</p>
+        </div>
+        <div class="project" data-aos="fade-right">
+            <h3>AI New Projects Developer - Cochez y CIA (November 2023 - January 2024)</h3>
+            <p>Developed an AI-driven chatbot to enhance customer interactions, successfully implementing the solution to optimize processes for over 50 retail locations nationwide.</p>
+        </div>
+        <div class="project" data-aos="fade-left">
+            <h3>AI Developer Intern - Hypernova Labs (May 2023 - August 2023)</h3>
+            <p>Worked on translating legacy platforms into modern code using AutoGPT, enhancing project quality through hands-on coding, debugging, and testing.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="container" data-aos="fade-up">
+        <h2>Technology Skills & Certifications</h2>
+        <ul>
+            <li><strong>Technology:</strong> C, Python, Java, SQL, CSS, HTML, Next.JS, Microsoft Office</li>
+            <li><strong>Certifications:</strong> AWS, Google Analytics, Adobe EP, Marketo, HubSpot Marketing</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="container" data-aos="fade-up">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div id="success-message" class="hidden">Thank you for reaching out!</div>
+    </section>
+
+    <!-- Footer Section with LinkedIn and Email Icons -->
+    <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/joseph-arman-857292232/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:josepharmancollege@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 Joseph Arman. All rights reserved.</p>
+    </footer>
+
+    <!-- AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Initialize AOS -->
+    <script>
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
