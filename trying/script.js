@@ -5,7 +5,6 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     
     // Show the success message
     const successMessage = document.getElementById('success-message');
-    successMessage.style.display = 'block';
     successMessage.classList.add('visible');
     
     // Optionally, reset the form
@@ -23,3 +22,4 @@ window.addEventListener('scroll', function() {
         }
     });
 });
+
