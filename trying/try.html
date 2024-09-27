@@ -71,20 +71,18 @@
 
     <section id="contact" class="container" data-aos="fade-up">
         <h2>Contact Me</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            
-            <div class="button-wrapper">
-                <button type="submit" class="btn">Send Message</button>
-            </div>
-        </form>
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="<form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="197fbeef-76f0-41b3-b0ad-a77646d9e7ad">
+
+            <input type="text" name="name" required>
+            <input type="email" name="email" required>
+            <textarea name="message" required></textarea>
+            <button type="submit">Submit Form</button>
+
+        </form>">
         <div id="success-message" class="hidden">Thank you for reaching out!</div>
     </section>
     
