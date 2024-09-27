@@ -27,7 +27,7 @@ setInterval(updateTime, 1000);
 updateTime();
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textArray = ["AI Engineer with a CIS Degree from Bentley University"]; // The text to be typed
+    const textArray = ["AI Engineer"]; // The text to be typed
     const typedTextElement = document.querySelector(".typed-text");
     const typingSpeed = 120; // Typing speed in milliseconds
     const pauseBetweenTyping = 150000; // Pause time before restarting
