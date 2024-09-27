@@ -276,3 +276,29 @@ body {
 .fade-in {
     animation: fadeIn 1s ease-in-out forwards;
 }
+
+/* Center the Send Message button */
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Hide success message initially */
+#success-message {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #238636; /* Use the same green as buttons */
+    text-align: center;
+}
+
+/* Optionally, you can add some fading effect for the success message */
+.hidden {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
