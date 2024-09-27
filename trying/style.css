@@ -162,42 +162,6 @@ nav a:hover {
     color: #79c0ff;
 }
 
-/* Terminal-like Contact Section */
-#contact {
-    background-color: #0d1117;
-    color: #58a6ff;
-    padding: 3rem 0;
-    border-radius: 10px;
-    text-align: center;
-}
-
-#contact h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-#contact form {
-    max-width: 600px;
-    margin: auto;
-    text-align: left;
-}
-
-#contact label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-#contact input, 
-#contact textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
-    border-radius: 5px;
-    border: none;
-    background-color: #161b22; /* Terminal-like input fields */
-    color: #c9d1d9;
-}
 
 
 /* Footer Styling */
@@ -309,6 +273,77 @@ button.btn:hover {
 }
 
 /* Style for the success message */
+#success-message {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    color: #238636;
+    text-align: center;
+}
+
+.visible {
+    display: block;
+}
+
+/* Styling the contact form bubble */
+#contact {
+    background-color: #161b22; /* Dark background to contrast the form */
+    color: #58a6ff;
+    padding: 3rem;
+    border-radius: 15px; /* Rounded corners */
+    max-width: 700px; /* Limit the width of the form bubble */
+    margin: 3rem auto; /* Center the form on the page */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a soft shadow for elevation */
+    text-align: center; /* Center the text inside the section */
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #58a6ff;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d1117; /* Darker background for input fields */
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+#contact button {
+    background-color: #238636;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make the button full-width */
+}
+
+#contact button:hover {
+    background-color: #2ea043;
+}
+
+/* Styling the success message */
 #success-message {
     display: none;
     margin-top: 1rem;
