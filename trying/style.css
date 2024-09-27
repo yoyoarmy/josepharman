@@ -33,13 +33,22 @@ body {
 
 /* Add initial state for shrinking header */
 .sticky-header.shrink {
-    max-width: 60px; /* Shrink the header bubble */
-    padding: 5px 10px;
-    border-radius: 50%; /* Make it circular when shrunk */
-    justify-content: center; /* Keep the content centered */
-    align-items: center; /* Ensure the content stays vertically centered */
+    max-width: 200px; /* Wider bubble when shrunk */
+    padding: 5px 20px;
+    border-radius: 50px; /* Still rounded but wider */
+    justify-content: flex-end; /* Space between elements, moon icon goes to the right */
+    align-items: center; /* Vertically center the content */
     margin: 0 auto; /* Ensure it's centered horizontally within the page */
 }
+
+.sticky-header {
+    transition: max-width 0.5s ease-in-out, padding 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+}
+
+.sticky-header.shrink:hover {
+    transition: max-width 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.5s ease-in-out;
+}
+
 
 /* Hide navigation links when header is shrunk */
 .sticky-header.shrink .navigation {
@@ -68,7 +77,6 @@ body {
 .sticky-header.shrink:hover .navigation {
     display: flex;
 }
-
 
 .header-content {
     display: flex;
@@ -108,6 +116,10 @@ body {
 
 .theme-toggle i {
     font-size: 18px;
+}
+
+.sticky-header.shrink .theme-toggle {
+    margin-left: auto; /* Push the moon icon to the right */
 }
 
 .theme-toggle:hover {
@@ -266,7 +278,7 @@ footer {
 .footer-icons a {
     color: white;
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     background-color: #555;
     border-radius: 50%;
     width: 50px;
@@ -277,9 +289,16 @@ footer {
     transition: background-color 0.3s ease;
 }
 
-.footer-icons a:hover {
-    background-color: #238636; /* Neon effect for hover */
+/* LinkedIn button hover - LinkedIn blue */
+.footer-icons a[href*="linkedin"]:hover i {
+    color: #0077b5; /* LinkedIn blue */
 }
+
+/* Mail button hover - Gmail red */
+.footer-icons a[href^="mailto"]:hover i {
+    color: #D14836; /* Gmail red */
+}
+
 
 /* Animation and Effects */
 @keyframes fadeIn {
@@ -438,4 +457,16 @@ button.btn:hover {
 
 .visible {
     display: block;
+}
+
+/* Default dark-mode styling */
+.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Default light-mode styling */
+.light-mode {
+    background-color: #fff;
+    color: #000;
 }

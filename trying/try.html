@@ -142,10 +142,29 @@
         </script>
 
 <script>
-    const themeToggleButton = document.querySelector('.theme-toggle');
-    themeToggleButton.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-    });
+   const themeToggleButton = document.querySelector('.theme-toggle');
+const bodyElement = document.body;
+
+// Store the current (original) background color in a variable
+const originalBackgroundColor = getComputedStyle(bodyElement).backgroundColor;
+
+// Add event listener for toggle button
+themeToggleButton.addEventListener('click', () => {
+    // Toggle between dark mode and light mode
+    bodyElement.classList.toggle('light-mode');
+
+    // Check if light mode is active
+    if (bodyElement.classList.contains('light-mode')) {
+        // Change the icon to sun and set the background to white
+        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        bodyElement.style.backgroundColor = '#fff'; // Light mode (white background)
+    } else {
+        // Change the icon back to moon and set the background to the original color
+        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        bodyElement.style.backgroundColor = originalBackgroundColor; // Revert to original dark mode color
+    }
+});
+
 
     window.addEventListener('scroll', () => {
     const header = document.querySelector('.sticky-header');
@@ -155,6 +174,8 @@
         header.classList.remove('shrink'); // Restore the original header when back at the top
     }
 });
+
+
 </script>
 
 <style>
