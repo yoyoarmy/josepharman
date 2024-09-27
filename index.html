@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joseph Arman's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Code+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     
     <!-- AOS CSS -->
@@ -84,7 +86,16 @@
         <div id="success-message" class="hidden">Thank you for reaching out!</div>
     </section>
 
+    <!-- Footer Section with LinkedIn and Email Icons -->
     <footer>
+        <div class="footer-icons">
+            <a href="https://www.linkedin.com/in/joseph-arman-857292232/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:josepharmancollege@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
         <p>&copy; 2024 Joseph Arman. All rights reserved.</p>
     </footer>
 
@@ -93,10 +104,10 @@
 
     <!-- Initialize AOS -->
     <script>
-			AOS.init({
-				easing: 'ease-out-back',
-				duration: 1000
-			});
+        AOS.init({
+            easing: 'ease-out-back',
+            duration: 1000
+        });
     </script>
     
     <script src="script.js"></script>

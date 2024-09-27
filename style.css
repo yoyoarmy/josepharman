@@ -205,13 +205,42 @@ nav a {
     background-color: #2ea043;
 }
 
-/* Footer */
+/* Footer Styling */
 footer {
-    text-align: center;
-    padding: 1rem 0;
     background-color: #333;
     color: white;
+    text-align: center;
+    padding: 2rem 0;
+    position: relative;
 }
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    display: inline-block;
+    background-color: #555;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons a:hover {
+    background-color: #0077b5; /* LinkedIn blue for hover */
+}
+
+.footer-icons i {
+    font-size: 1.5rem;
+}
+
 
 
 /* Fade-in Animation for elements */
