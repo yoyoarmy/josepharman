@@ -20,65 +20,43 @@ body {
     padding: 2rem 0;
 }
 
-/* Sticky Header */
-.dynamic-header {
+/* Sticky Header Styling */
+.sticky-header {
     position: sticky;
-    top: 0;
-    width: 100%;
+    top: 10px; /* A bit of space from the top */
+    width: 100%; /* Full width but we will control the bubble size */
+    z-index: 1000; /* Ensure it stays on top */
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    z-index: 1000;
-    background: transparent;
+    justify-content: center; /* Center the header content */
+    background: transparent; /* Transparent background, no full background */
 }
 
-/* Dynamic Island Base Styles */
-.dynamic-island {
-    position: relative;
-    background-color: #111;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 50px; /* Pill shape */
+.header-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add shadow */
-}
-
-/* Collapsed State */
-.dynamic-island-collapsed {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px 10px;
-    font-size: 24px; /* Moon icon size */
-}
-
-/* Expanded State (hidden by default) */
-.dynamic-island-expanded {
-    display: none;
-    align-items: center;
     justify-content: space-between;
-    padding: 5px 20px;
-    gap: 20px;
-    font-size: 18px;
+    align-items: center;
+    max-width: 700px; /* Less wide */
+    width: 80%; /* A bit narrower than the full width */
+    background-color: #111; /* Darker background for content */
+    padding: 10px 20px;
+    border-radius: 50px; /* Creates the rounded edges */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow for elevation */
 }
 
-.dynamic-island-expanded a {
+.navigation a {
+    margin-right: 20px;
     color: white;
     text-decoration: none;
-    margin-right: 15px;
+    font-size: 18px;
     font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.05em;
 }
 
-.dynamic-island-expanded a:hover {
-    color: #58a6ff; /* Link hover color */
+.navigation a:hover {
+    color: #58a6ff; /* Hover color for links */
 }
 
-/* Moon Icon in Expanded State */
 .theme-toggle {
     background-color: #111;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -86,6 +64,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
+    font-size: 18px;
 }
 
 .theme-toggle i {
@@ -94,18 +73,6 @@ body {
 
 .theme-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
-}
-
-/* Hover Effect to Expand the Island */
-.dynamic-island:hover .dynamic-island-collapsed {
-    display: none; /* Hide collapsed state */
-}
-
-.dynamic-island:hover .dynamic-island-expanded {
-    display: flex; /* Show expanded state */
-    background-color: #111;
-    border-radius: 50px;
-    width: auto; /* Allow the width to expand */
 }
 
 
