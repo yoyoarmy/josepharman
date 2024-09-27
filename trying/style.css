@@ -1,0 +1,278 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace; /* Monospace font for a coder feel */
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9; /* Soft white text */
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+/* Header Styling */
+header {
+    background: #161b22;
+    color: #58a6ff; /* Bright blue for coder feel */
+    padding: 1rem 0;
+    text-align: center;
+    border-bottom: 1px solid #30363d; /* Adds a terminal-like border */
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: #58a6ff; /* Neon blue links */
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #79c0ff; /* Slightly lighter on hover */
+}
+
+/* Hero Section */
+#hero {
+    background: #161b22; /* Darker hero section */
+    color: #c9d1d9;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 2.5rem;
+    color: #58a6ff; /* Coder-theme color */
+}
+
+#hero p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+#hero .btn {
+    background-color: #238636; /* Green for buttons */
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#hero .btn:hover {
+    background-color: #2ea043;
+}
+
+/* Code Editor Style for About Section */
+#about {
+    background-color: #0d1117;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: #c9d1d9;
+    text-align: justify;
+    border: 1px solid #30363d; /* Border similar to code blocks */
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #58a6ff;
+}
+
+#about p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Syntax Highlighting for Experience Section */
+#experience {
+    padding: 3rem 0;
+    background-color: #0d1117;
+}
+
+#experience h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #58a6ff;
+}
+
+.project {
+    background-color: #161b22;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #30363d;
+}
+
+/* Skills Section */
+#skills {
+    padding: 3rem 0;
+    background-color: #161b22;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #58a6ff;
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+#skills ul li {
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #0d1117;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+    color: #79c0ff;
+}
+
+/* Terminal-like Contact Section */
+#contact {
+    background-color: #0d1117;
+    color: #58a6ff;
+    padding: 3rem 0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+#contact form {
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+#contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+#contact input, 
+#contact textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #161b22; /* Terminal-like input fields */
+    color: #c9d1d9;
+}
+
+#contact button {
+    background-color: #238636;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #2ea043;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #161b22;
+    color: #58a6ff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: #555;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.footer-icons a:hover {
+    background-color: #238636; /* Neon effect for hover */
+}
+
+/* Animation and Effects */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+.project {
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+.project {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in-out forwards;
+}
