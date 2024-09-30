@@ -258,7 +258,7 @@ nav a:hover {
 
 /* Skills Section */
 #skills {
-    padding: 1rem 0;
+    padding: 2rem 0;
     background-color: #161b22;
 }
 
@@ -287,6 +287,42 @@ nav a:hover {
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid #30363d;
+    color: #79c0ff;
+}
+
+/* Courses Section */
+#courses {
+    margin-top: 3rem;
+    padding: 1rem 0;
+    background-color: #161b22;
+}
+
+#courses h2 {
+    text-align: left;
+    font-size: 3rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    color: #58a6ff;
+}
+
+#courses ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+#courses ul li {
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #0d1117;
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #30363d;
+    max-width: 90%;
     color: #79c0ff;
 }
 
@@ -527,7 +563,15 @@ form input[type="text"], form input[type="email"], form textarea {
 /* Technologies section */
 #technologies {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 0rem;
+
+}
+
+#technologies h2 {
+    text-align: left;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    color: #58a6ff;
 }
 
 .technologies-grid {
