@@ -652,3 +652,56 @@ form input[type="text"], form input[type="email"], form textarea {
     background: linear-gradient(to bottom, #00f, #0ff); /* Gradient effect */
     transition: height 0.1s ease-out;
 }
+
+
+/* General Dropdown Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Button Styling */
+.dropbtn {
+    background-color: #111;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.05em;
+}
+
+/* Dropdown Content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0d1117;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    border: 0.7px ridge rgba(255, 255, 255, 0.312);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: white;
+    font-size: 15px;
+    padding: 8px 14px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 0.05em;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}

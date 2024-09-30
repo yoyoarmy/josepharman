@@ -16,20 +16,47 @@
     <header class="sticky-header">
         <div class="header-content">
             <div class="time-display">
-                
                 <span id="current-time"></span>
             </div>
+    
+            <!-- Navigation Dropdown -->
             <nav class="navigation">
-                <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#technologies">Skills</a>
-                <a href="#contact">Contact</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Navigation</button>
+                    <div class="dropdown-content">
+                        <a href="#hero">Landing</a>
+                        <a href="#about">About Me</a>
+                        <a href="#experience">Experience</a>
+                        <a href="#technologies">Skills</a>
+                        <a href="#skills">Certifications</a>
+                        <a href="#courses">Courses</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+    
+                <div class="dropdown">
+                    <button class="dropbtn">Social</button>
+                    <div class="dropdown-content">
+                        <a href="https://github.com/yourusername" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="mailto:josepharmancollege@gmail.com" target="_blank">
+                            <i class="fas fa-envelope"></i> Email
+                            </a>
+                    </div>
+                </div>
             </nav>
+    
             <button class="theme-toggle">
                 <i class="fas fa-moon"></i>
             </button>
         </div>
     </header>
+    
 
     <div class="scroll-line-container">
         <div class="scroll-line"></div>
@@ -159,19 +186,6 @@
     </section>
     
     
-
-    <!-- Footer Section with LinkedIn and Email Icons -->
-    <footer>
-        <div class="footer-icons">
-            <a href="https://www.linkedin.com/in/joseph-arman-857292232/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:josepharmancollege@gmail.com" target="_blank">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-        <p>&copy; 2024 Joseph Arman. All rights reserved.</p>
-    </footer>
 
     <script>
         document.getElementById('contact-form').addEventListener('submit', function(e) {
