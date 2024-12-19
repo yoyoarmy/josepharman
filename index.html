@@ -28,9 +28,6 @@
                         <a href="#about">About Me</a>
                         <a href="#experience">Experience</a>
                         <a href="#technologies">Skills</a>
-                        <a href="#skills">Certifications</a>
-                        <a href="#courses">Courses</a>
-                        <a href="#projects">Projects</a>
                         <a href="#contact">Contact</a>
                     </div>
                 </div>
@@ -47,6 +44,14 @@
                         <a href="mailto:josepharmancollege@gmail.com" target="_blank">
                             <i class="fas fa-envelope"></i> Email
                             </a>
+                    </div>
+                </div>
+            
+
+                <div class="dropdown">
+                    <button class="dropbtn">Projects</button>
+                    <div class="dropdown-content">
+                        <a href="https://youtube.com">Youtube</a>
                     </div>
                 </div>
             </nav>
@@ -69,6 +74,7 @@
             <span class="typed-text"></span>
             </h2>
             <a href="https://docs.google.com/document/d/1jFRpaFwu73s3tJ6OnKbB0YGa8pDYRDem/edit?usp=sharing&ouid=113124627461045429007&rtpof=true&sd=true" class="download-btn">Download CV</a>
+            <a href="#contact" class="download-btn">Contact Me</a>
         </div>
         </div>
     </section>
@@ -128,36 +134,6 @@
         </div>
     </section>
     
-
-  <!-- Skills Section -->
-<section id="skills" class="container" data-aos="fade-up">
-    <h2>Certifications</h2>
-    <ul>
-        <li><strong><a href="https://drive.google.com/file/d/1iIpKFnIIpxFQJNBNjPOFe3l0sk_c3amo/view?usp=sharing" target="_blank">
-            HubSpot Academy Digital Marketing</a></strong>
-        </li>
-        <li><strong><a href="https://drive.google.com/file/d/1hFkqf_cQbB_s_014zqLT9MOFw31XzCBJ/view?usp=sharing" target="_blank">
-            HubSpot Academy Email Marketing</a></strong>
-        </li>
-        <li><strong><a href="https://drive.google.com/file/d/1D9NbfZkniAzp8DdofeRo1mAz_id1bhMk/view?usp=sharing" target="_blank">
-            HubSpot Academy Content Marketing</a></strong>
-        </li>
-        <li><strong><a href="https://drive.google.com/file/d/1svlPpnyO5d2QkaUb9kHt7-XDbX1trTYF/view?usp=sharing" target="_blank">
-            Google Analytics Certification</a></strong>
-        </li>
-    </ul>
-</section>
-
-<!-- Courses Section -->
-<section id="courses" class="container" data-aos="fade-up">
-    <h2>Courses</h2>
-    <ul>
-        <li><strong>Amazon Web Services (AWS) Foundations:</strong> Completed an in-depth course covering cloud computing, AWS core services, and best practices for deploying applications on AWS.</li>
-        <li><strong>Adobe Marketo:</strong> Completed a comprehensive course on marketing automation, learning how to create and optimize marketing campaigns using Adobe Marketo.</li>
-        <li><strong>Adobe Experience Platform:</strong> Gained hands-on experience in managing and utilizing customer data with Adobe Experience Platform, enhancing skills in data-driven marketing.</li>
-        <li><strong>Harvard CS50x - Introduction to Computer Science:</strong> Completed Harvard's renowned CS50x course, which covered fundamental computer science concepts, algorithms, data structures, and web development.</li>
-    </ul>
-</section>
 
 
     <section id="contact" class="container" data-aos="fade-up">
@@ -219,28 +195,20 @@
 
 <script>
    const themeToggleButton = document.querySelector('.theme-toggle');
-const bodyElement = document.body;
+    const bodyElement = document.body;
 
-// Store the current (original) background color in a variable
-const originalBackgroundColor = getComputedStyle(bodyElement).backgroundColor;
+    // Add event listener for toggle button
+    themeToggleButton.addEventListener('click', () => {
+        bodyElement.classList.toggle('light-mode');
 
-// Add event listener for toggle button
-themeToggleButton.addEventListener('click', () => {
-    // Toggle between dark mode and light mode
-    bodyElement.classList.toggle('light-mode');
-
-    // Check if light mode is active
-    if (bodyElement.classList.contains('light-mode')) {
-        // Change the icon to sun and set the background to white
-        themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
-        bodyElement.style.backgroundColor = '#fff'; // Light mode (white background)
-    } else {
-        // Change the icon back to moon and set the background to the original color
-        themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
-        bodyElement.style.backgroundColor = originalBackgroundColor; // Revert to original dark mode color
-    }
-});
-
+        if (bodyElement.classList.contains('light-mode')) {
+            // Switch to light mode icon (sun)
+            themeToggleButton.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            // Switch back to dark mode icon (moon)
+            themeToggleButton.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    });
 
     window.addEventListener('scroll', () => {
     const header = document.querySelector('.sticky-header');

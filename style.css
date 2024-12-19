@@ -552,6 +552,7 @@ form input[type="text"], form input[type="email"], form textarea {
     text-align: center;
     margin: 0 auto; /* Center the button */
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-left: 20px;
     cursor: pointer;
 }
 
@@ -704,4 +705,88 @@ form input[type="text"], form input[type="email"], form textarea {
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
+}
+
+.certifications {
+    display: flex;
+    justify-content: space-around; /* evenly distributes the badges */
+    flex-wrap: wrap; /* ensures content is responsive */
+    gap: 5px; /* adjusts the spacing between badges */
+}
+
+.certification {
+    flex-grow: 1;
+    max-width: 150px; /* ensures all images have a max size */
+}
+
+.certification img {
+    max-width: 60%; /* ensures that images fit the container */
+    height: auto; /* maintains aspect ratio */
+    object-fit: contain; /* prevents distortion */
+    padding: 10px; /* space around the images */
+    border-radius: 10px; /* rounded corners for a cleaner look */
+}
+
+/* Light mode styling */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Adjust header content in light mode if needed */
+body.light-mode .header-content {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .theme-toggle {
+    background-color: #eee;
+    color: #111;
+    border: 1px solid #aaa;
+}
+
+/* Ensure links are visible in light mode */
+body.light-mode a {
+    color: #0066cc; /* A readable color on white background */
+}
+
+body.light-mode a:hover {
+    color: #004999;
+}
+
+/* For dropdown background in light mode */
+body.light-mode .dropdown-content {
+    background-color: #f9f9f9;
+    border: 1px solid #aaa;
+}
+
+body.light-mode .download-btn {
+    background-color: #ddd;
+    color: #000;
+    border: 1px solid #999;
+}
+
+/* Update sections that have a hard-coded dark background */
+body.light-mode #about, 
+body.light-mode #experience, 
+body.light-mode #technologies, 
+body.light-mode #contact {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    color: #000;
+}
+
+body.light-mode .tech-item {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    color: #000;
+}
+
+body.light-mode .tech-item:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Adjusting the scroll line for visibility in light mode */
+body.light-mode .scroll-line {
+    background: linear-gradient(to bottom, #0000ff, #00ffff);
 }
